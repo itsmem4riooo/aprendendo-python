@@ -134,11 +134,15 @@ def login():
     return users[cpf],cpf
 
 def deposit(value,account,user):
+    if value > 0:
 
-    users[user]['accounts'][account]['balance']+= value
-    users[user]['accounts'][account]['statement']+= f"Depósido de R${value}\n"
-    print(f"Depósito realizado com sucesso! Saldo atual: R${users[user]['accounts'][account]['balance']}")
-    return users[user]['accounts'][account]
+        users[user]['accounts'][account]['balance']+= value
+        users[user]['accounts'][account]['statement']+= f"Depósido de R${value}\n"
+        print(f"Depósito realizado com sucesso! Saldo atual: R${users[user]['accounts'][account]['balance']}")
+        return users[user]['accounts'][account]
+        
+    else:
+        print('Valor inválido!')
 
 def withdrawal(*account,user):
 
