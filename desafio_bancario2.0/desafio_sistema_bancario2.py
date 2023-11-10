@@ -1,4 +1,4 @@
-import funcions
+import functions
 
 print("\n"+"*" * 40,)
 print("\n     Bem-vindo ao Python Bank\n")
@@ -11,12 +11,12 @@ while True:
     action = input("Digite uma opção para prosseguir:")
 
     if action == "1":
-        funcions.register()
+        functions.register()
     elif action == "2":
-        funcions.add_account()
+        functions.add_account()
     elif action == "3":
         while True:
-            user,user_id = funcions.login()
+            user,user_id = functions.login()
             if user:
 
                 print('CONTAS REGISTRADAS NESTE USUÁRIO: ')
@@ -53,13 +53,13 @@ MENU
 
                     if menu_option == "d":
                             
-                        funcions.deposit(float(input("Informe o valor do depósito: ")),account_id,user_id)
+                        functions.deposit(float(input("Informe o valor do depósito: ")),account_id,user_id)
                         continue                            
 
                     if menu_option == "s":
-                            funcions.withdrawal(account_id,user_id)
+                            functions.withdrawal(account_id,user_id)
                     elif menu_option == "e":
-                        funcions.extract(account_id,user=user_id)
+                        functions.extract(account_id,user=user_id)
                     elif menu_option == "q":
                         break
                     else:

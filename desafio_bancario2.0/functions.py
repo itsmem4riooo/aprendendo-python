@@ -188,3 +188,4 @@ def add_account():
         last_insert_id += 1
 
         users[user_id]['accounts'][last_insert_id] = { 'account_type': account_type, 'balance': 0.0, 'numero_saques': 0, 'statement':''}
+
