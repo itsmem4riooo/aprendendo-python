@@ -14,9 +14,8 @@ class History():
             print('Tipo inválido')
             return False
         
-        self.history = [
-            {'date': Date.strftime(Date_format) ,'client': user,'account':account,'type':type,'value':value}
-        ]
+        self.history.append({'date': Date.strftime(Date_format) ,'client': user,'account':account,'type':type,'value':value})
+        
 
     def get_history(self,user,account):
 
